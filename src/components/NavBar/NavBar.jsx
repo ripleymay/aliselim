@@ -4,20 +4,20 @@ import * as usersService from '../../utilities/users-service';
 
 export default function NavBar(props) {
 
-  function handleLogOut() {
-    usersService.logOut();
-    props.setUser(null);
-  }
+  // function handleLogOut() {
+  //   usersService.logOut();
+  //   props.setUser(null);
+  // }
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
+      <Link to="/spoken">This</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
+      <Link to="/written">That</Link>
       &nbsp; | &nbsp;
-      <span>Welcome, {props.user.name}</span>
+      <Link to="/visual">The Other Thing</Link>
       &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
+      <Link to="/contact">Where am I?</Link>
     </nav>
   );
 }
