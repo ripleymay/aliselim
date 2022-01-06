@@ -4,7 +4,7 @@ const postsCtrl = require('../../controllers/api/posts');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // POST /api/posts
-router.post('/', postsCtrl.create);
+router.post('/', ensureLoggedIn, postsCtrl.create);
 router.get('/all/:category', postsCtrl.getAll);
 router.get('/:id', postsCtrl.detail);
 

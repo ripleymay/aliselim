@@ -5,8 +5,8 @@ const postSchema = new Schema({
   title: {type: String, required: true},
   category: {type: String, required: true, enum: ['Spoken', 'Visual', 'Written']},
   image: {type: String, required: true},
-  link: {type: String},
-  body: {type: String}
+  body: {type: String, required: true},
+  link: {type: String}
 }, {
   timestamps: true,
 });
