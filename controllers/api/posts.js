@@ -1,7 +1,8 @@
 const Post = require('../../models/post');
 
 module.exports = {
-  create
+  create,
+  getAll,
 };
 
 async function create(req, res) {
@@ -13,4 +14,9 @@ async function create(req, res) {
     post.body = req.body.body;
     await post.save();
     res.json(post);
+}
+
+async function getAll(req, res) {
+  const posts = await Post.find({category: req.params.category});
+  res.json(posts);
 }
