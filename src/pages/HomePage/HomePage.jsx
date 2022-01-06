@@ -5,7 +5,7 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>Ali Selim</h1>
+      <h1 className="aliselim">Ali Selim</h1>
     </>
   );
 }

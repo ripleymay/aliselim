@@ -6,10 +6,3 @@
 body {
   background: white;
 }
-
-h1 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 30vh;
-  display: flex;
-  justify-self: left;
-}
