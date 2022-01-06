@@ -5,6 +5,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // POST /api/posts
 router.post('/', postsCtrl.create);
-router.get('/:category', postsCtrl.getAll);
+router.get('/all/:category', postsCtrl.getAll);
+router.get('/:id', postsCtrl.detail);
 
 module.exports = router;
