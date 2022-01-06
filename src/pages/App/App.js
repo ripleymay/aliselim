@@ -8,6 +8,7 @@ import SpokenPage from '../SpokenPage/SpokenPage';
 import VisualPage from '../VisualPage/VisualPage';
 import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
+import NewPostPage from '../NewPostPage/NewPostPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/spoken" element={<SpokenPage />} />
             <Route path="/visual" element={<VisualPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/posts/new" element={<NewPostPage />} />
           </Routes>
         </>
         {/* <AuthPage setUser={setUser} /> */}
