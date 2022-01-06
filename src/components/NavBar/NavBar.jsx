@@ -18,6 +18,8 @@ export default function NavBar(props) {
       <Link to="/visual">The Other Thing</Link>
       &nbsp; | &nbsp;
       <Link to="/contact">Where am I?</Link>
+      &nbsp; | &nbsp;
+      <Link to="/posts/new">Add a post</Link>
     </nav>
   );
 }
