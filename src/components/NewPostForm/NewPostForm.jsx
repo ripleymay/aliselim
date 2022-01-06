@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import * as postsAPI from '../../utilities/posts-api';
 
 export default function NewPostForm() {
   const [formData, setFormData] = useState({
     title: '',
     image: '',
     link: '',
-    category: '',
+    category: 'Spoken',
     body: ''
   });
   const [error, setError] = useState('');
@@ -20,6 +21,14 @@ export default function NewPostForm() {
     evt.preventDefault();
     try {
       await postsAPI.create(formData);
+      setFormData({
+        title: '',
+        image: '',
+        link: '',
+        category: '',
+        body: ''
+      })
+      
     } catch {
       setError('Post creation failed - try again');
     }

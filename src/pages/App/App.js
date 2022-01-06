@@ -12,15 +12,17 @@ import NewPostPage from '../NewPostPage/NewPostPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [posts, setPosts] = useState([]);
+
   return (
     <main className="App">
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-            <Route path="/written" element={<WrittenPage />} />
-            <Route path="/spoken" element={<SpokenPage />} />
-            <Route path="/visual" element={<VisualPage />} />
+            <Route path="/written" element={<WrittenPage posts={posts} setPosts={setPosts}/>} />
+            <Route path="/spoken" element={<SpokenPage posts={posts} setPosts={setPosts}/>} />
+            <Route path="/visual" element={<VisualPage posts={posts} setPosts={setPosts}/>} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/posts/new" element={<NewPostPage />} />
           </Routes>
