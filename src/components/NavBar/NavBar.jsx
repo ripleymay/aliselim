@@ -11,6 +11,8 @@ export default function NavBar(props) {
 
   return (
     <nav>
+      <Link to="/">Ali Selim</Link>
+      &nbsp; | &nbsp;
       <Link to="/spoken">This</Link>
       &nbsp; | &nbsp;
       <Link to="/written">That</Link>

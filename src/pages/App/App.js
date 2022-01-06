@@ -10,6 +10,7 @@ import ContactPage from '../ContactPage/ContactPage';
 import NavBar from '../../components/NavBar/NavBar';
 import NewPostPage from '../NewPostPage/NewPostPage';
 import PostDetailPage from '../PostDetailPage/PostDetailPage';
+import HomePage from '../HomePage/HomePage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/posts/:id" element={<PostDetailPage />} />
             <Route path="/posts/new" element={<NewPostPage />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </>
         {/* <AuthPage setUser={setUser} /> */}
