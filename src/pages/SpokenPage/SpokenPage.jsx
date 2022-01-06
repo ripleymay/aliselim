@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import * as postsAPI from '../../utilities/posts-api';
 
 export default function SpokenPage({posts, setPosts}) {
@@ -14,9 +15,16 @@ export default function SpokenPage({posts, setPosts}) {
   return (
     <>
       <h1>Spoken Work</h1>
-      {posts.map((p, idx) => 
-      <h3>{p.title}</h3>
-      )}
+      <div className="PostCards">
+        {posts.map((p, idx) => 
+          <Link to={`/posts/${p._id}`} key={idx}>
+            <div>
+              <h1> {p.title} </h1>
+              <img src={p.image} alt={p.title} width="300" />
+            </div>
+          </Link>
+        )}
+      </div>
     </>
   );
 }

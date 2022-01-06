@@ -3,6 +3,7 @@ const Post = require('../../models/post');
 module.exports = {
   create,
   getAll,
+  detail,
 };
 
 async function create(req, res) {
@@ -19,4 +20,9 @@ async function create(req, res) {
 async function getAll(req, res) {
   const posts = await Post.find({category: req.params.category});
   res.json(posts);
+}
+
+async function detail(req, res) {
+  let post = await Post.findById(req.params.id);
+  res.json(post);
 }
