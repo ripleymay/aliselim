@@ -1,0 +1,25 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container textarea, .form-container select {
+    padding: 1vmin;
+    margin: 1vmin;
+    font-size: 2vmin;
+    border: .1vmin solid black;
+    border-radius: .5vmin;
+    outline: none;
+}
+
+.form-container textarea {
+    height: 20vh;
+}
+
+.form-container select {
+    width: fit-content;
+}
+
+.form-container textarea:focus, .form-container select:focus {
+    border-color: var(--beaver);
+}
