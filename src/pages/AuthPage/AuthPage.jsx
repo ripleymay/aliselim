@@ -1,11 +1,13 @@
 import React from 'react';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import './AuthPage.css';
 
 export default function AuthPage({ setUser }) {
   return (
-    <main>
-      <h2>Welcome Ali!</h2>
+    <>
+      <h2 className="welcome">Welcome Ali!</h2>
+      <hr />
       <LoginForm setUser={setUser} />
-    </main>
+    </>
   );
 }

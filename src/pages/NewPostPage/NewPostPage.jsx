@@ -5,7 +5,8 @@ export default function NewPostPage() {
 
   return (
     <>
-      <h1>Make a new post!</h1>
+      <h1 className="welcome">Make a new post!</h1>
+      <hr />
       <NewPostForm />
     </>
   );
