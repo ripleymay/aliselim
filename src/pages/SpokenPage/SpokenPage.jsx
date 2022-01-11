@@ -5,11 +5,11 @@ import * as postsAPI from '../../utilities/posts-api';
 export default function SpokenPage({posts, setPosts}) {
 
   useEffect(function(){
-    async function getAllPosts() {
-      const post = await postsAPI.getAll('Spoken');
+    async function getCatPosts() {
+      const post = await postsAPI.getCat('Spoken');
       setPosts(post)
     }
-    getAllPosts();
+    getCatPosts();
   }, []);
 
   return (

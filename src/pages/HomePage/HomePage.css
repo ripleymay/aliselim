@@ -1,12 +1,29 @@
-.aliselim {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 20vw;
-    display: flex;
-    justify-self: left;
-    align-items: flex-end;
-    margin-top: 60vh;
-  }
 
 main {
-    height: 100vmin;
+  background-color: black;
+}
+
+.homepage-main {
+  background-color: black;
+  color: white;
+  font-family: 'Noticia Text', serif;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.homepage-main a{
+  text-decoration: none;
+  color: white;
+}
+
+.homepage-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 90vw;
 }
