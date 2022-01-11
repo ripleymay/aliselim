@@ -1,0 +1,17 @@
+.aliselim {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20vw;
+    display: flex;
+    justify-self: left;
+    align-items: flex-end;
+    margin-top: 60vh;
+    margin-bottom: 0px;
+  }
+
+#herocomp {
+    height: 100vh;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-end;
+}

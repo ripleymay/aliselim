@@ -6,8 +6,12 @@ export function create(postData) {
   return sendRequest(BASE_URL, 'POST', postData);
 }
 
-export function getAll(category) {
+export function getCat(category) {
   return sendRequest(`${BASE_URL}/all/${category}`);
+}
+
+export function getAll() {
+  return sendRequest(`${BASE_URL}/all`);
 }
 
 export function detail(id) {

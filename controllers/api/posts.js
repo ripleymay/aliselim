@@ -2,6 +2,7 @@ const Post = require('../../models/post');
 
 module.exports = {
   create,
+  getCat,
   getAll,
   detail,
 };
@@ -17,8 +18,13 @@ async function create(req, res) {
     res.json(post);
 }
 
-async function getAll(req, res) {
+async function getCat(req, res) {
   const posts = await Post.find({category: req.params.category});
+  res.json(posts);
+}
+
+async function getAll(req, res) {
+  const posts = await Post.find().sort("-createdAt");
   res.json(posts);
 }
 

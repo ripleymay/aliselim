@@ -27,7 +27,7 @@ export default function App() {
             <Route path="/visual" element={<VisualPage posts={posts} setPosts={setPosts}/>} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/posts/:id" element={<PostDetailPage />} />
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage posts={posts} setPosts={setPosts}/>} />
             <Route path="/alilogsin" element={<AuthPage setUser={setUser}/>} />
             { user && <Route path="/posts/new" element={<NewPostPage />} /> }
           </Routes>

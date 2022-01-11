@@ -5,11 +5,11 @@ import * as postsAPI from '../../utilities/posts-api';
 export default function VisualPage({posts, setPosts}) {
 
     useEffect(function(){
-        async function getAllPosts() {
-          const post = await postsAPI.getAll('Visual');
+        async function getCatPosts() {
+          const post = await postsAPI.getCat('Visual');
           setPosts(post)
         }
-        getAllPosts();
+        getCatPosts();
       }, []);
 
   return (

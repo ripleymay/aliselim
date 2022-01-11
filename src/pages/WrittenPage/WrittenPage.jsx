@@ -5,11 +5,11 @@ import * as postsAPI from '../../utilities/posts-api';
 export default function WrittenPage({posts, setPosts}) {
 
   useEffect(function(){
-    async function getAllPosts() {
-      const post = await postsAPI.getAll('Written');
+    async function getCatPosts() {
+      const post = await postsAPI.getCat('Written');
       setPosts(post)
     }
-    getAllPosts();
+    getCatPosts();
   }, []);
 
   return (
