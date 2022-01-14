@@ -28,7 +28,7 @@ export default function PostDetailPage() {
                 {posts.body}
             </p>
             {posts.link &&
-                <a href={posts.link}>{posts.link}</a>
+                <h3>Link to see more: <a href={posts.link}>{posts.link}</a></h3>
             }
         </>
     )
