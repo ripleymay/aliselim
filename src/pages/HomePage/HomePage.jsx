@@ -24,7 +24,7 @@ export default function HomePage({posts, setPosts}) {
               <h1 className='homepage-title'> {p.title} </h1>
               </Link>
               <div>
-              <img src={p.image} alt={p.title} className='homepage-img' width="300" />
+              <img src={p.image} alt={p.title} className='homepage-img' height="400" />
               <p>{p.body}</p>
               </div>
               <hr/>

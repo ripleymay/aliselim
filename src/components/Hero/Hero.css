@@ -15,3 +15,36 @@
     justify-content: flex-start;
     align-content: flex-end;
 }
+
+.aliselim > button {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20vw;
+    display: flex;
+    justify-self: left;
+    align-items: flex-end;
+    margin-top: 60vh;
+    margin-bottom: 0px;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+}
+
+#herocomp.selected {
+  background-color: black;
+  color: white;
+}
+
+#herocomp.selected > button {
+  background-color: black;
+  color: white;
+}
+
+#herocomp.selected > a {
+  background-color: black;
+  color: white;
+}
+
+#imdb {
+  color: black;
+  text-decoration: none;
+}
