@@ -23,8 +23,10 @@ export default function HomePage({posts, setPosts}) {
               <Link to={`/posts/${p._id}`} key={idx}>
               <h1 className='homepage-title'> {p.title} </h1>
               </Link>
-              <img src={p.image} alt={p.title} width="300" />
+              <div>
+              <img src={p.image} alt={p.title} className='homepage-img' width="300" />
               <p>{p.body}</p>
+              </div>
               <hr/>
             </div>
         )}

@@ -9,6 +9,7 @@ main {
   font-family: 'Noticia Text', serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   margin-left: 0px;
   padding-left: 0px;
@@ -22,8 +23,25 @@ main {
 .homepage-posts {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 75vw;
+  float: none;
+}
+
+.homepage-posts > p {
+  float: clear;
 }
 
 hr {
-  width: 90vw;
+  width: 50vw;
+}
+
+body {
+  padding: 0;
+}
+
+.homepage-img {
+  float: left;
+  margin: 15px;
 }
