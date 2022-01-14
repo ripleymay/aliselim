@@ -10,7 +10,7 @@ export default function NavBar(props) {
   }
 
   return (
-    <nav>
+    <nav className={props.selectedButton ? 'selected' : null}>
       { props.user && <><Link to="/posts/new">Add a post</Link> &nbsp; | &nbsp;</> }
       <Link to="/">Ali Selim</Link>
       &nbsp; | &nbsp;

@@ -4,7 +4,7 @@ import Hero from '../../components/Hero/Hero';
 import {Link} from 'react-router-dom';
 import * as postsAPI from '../../utilities/posts-api';
 
-export default function HomePage({posts, setPosts}) {
+export default function HomePage({posts, setPosts, setSelectedButton, selectedButton}) {
 
   useEffect(function(){
     async function getAllPosts() {
@@ -16,7 +16,7 @@ export default function HomePage({posts, setPosts}) {
 
   return (
     <>
-      <Hero />
+      <Hero setSelectedButton={setSelectedButton} selectedButton={selectedButton} />
       <main className='homepage-main'>
         {posts.map((p, idx) => 
             <div className='homepage-posts'>

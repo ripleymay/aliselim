@@ -16,10 +16,13 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [posts, setPosts] = useState([]);
 
+  const [selectedButton, setSelectedButton] = useState("");
+
+
   return (
     <main className="App">
         <>
-          <NavBar user={user} setUser={setUser} />
+          <NavBar user={user} setUser={setUser} selectedButton={selectedButton} />
           <Routes>
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
             <Route path="/written" element={<WrittenPage posts={posts} setPosts={setPosts}/>} />
@@ -27,7 +30,7 @@ export default function App() {
             <Route path="/visual" element={<VisualPage posts={posts} setPosts={setPosts}/>} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/posts/:id" element={<PostDetailPage />} />
-            <Route path="/" element={<HomePage posts={posts} setPosts={setPosts}/>} />
+            <Route path="/" element={<HomePage posts={posts} setPosts={setPosts} setSelectedButton={setSelectedButton} selectedButton={selectedButton}/>} />
             <Route path="/alilogsin" element={<AuthPage setUser={setUser}/>} />
             { user && <Route path="/posts/new" element={<NewPostPage />} /> }
           </Routes>

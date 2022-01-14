@@ -34,15 +34,17 @@
   color: white;
 }
 
-#herocomp.selected > button {
+#e-button.selected {
   background-color: black;
   color: white;
 }
 
-#herocomp.selected > a {
+#imdb.selected {
   background-color: black;
   color: white;
 }
+
+
 
 #imdb {
   color: black;

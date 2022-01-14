@@ -6,3 +6,12 @@
 body {
   background: white;
 }
+
+nav {
+  text-decoration: none;
+}
+
+nav.selected {
+  background-color: black;
+  color: white;
+}
