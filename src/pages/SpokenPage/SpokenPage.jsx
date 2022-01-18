@@ -15,7 +15,7 @@ export default function SpokenPage({posts, setPosts}) {
   return (
     <>
       <h1 className="work-title">Spoken Work</h1>
-    <hr/>
+      <hr/>
       <div className="PostCards">
         {posts.map((p, idx) => 
           <PostCard post={p} key={idx}/>
